@@ -1,0 +1,113 @@
+// Mobile styles //
+@media screen and (max-width: 767px) {
+  .contacts-list {
+    display: none;
+  }
+}
+
+// Tablet styles //
+
+@media screen and (min-width: 768px) {
+  .contacts-list {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 21px 0;
+    margin-left: 84px;
+
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  }
+
+  .contact-container {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+    transition: color var(--animation);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-text-color);
+    }
+  }
+
+  /* info@devstudio.com */
+  .mail-icon {
+    width: 14px;
+    height: 10px;
+    vertical-align: middle;
+    fill: var(--primary-text-color);
+    margin-right: 8px;
+    transition: fill var(--animation);
+
+    .contact-container:hover &,
+    .contact-container:focus & {
+      fill: var(--accent-text-color);
+    }
+  }
+
+  /* +38 096 111 11 11 */
+
+  .tel-icon {
+    width: 10px;
+    height: 14px;
+    vertical-align: middle;
+    fill: var(--primary-text-color);
+    margin-right: 8px;
+    transition: fill var(--animation);
+
+    .contact-container:hover &,
+    .contact-container:focus & {
+      fill: var(--accent-text-color);
+    }
+  }
+}
+
+// Desktop styles //
+
+@media screen and (min-width: 1200px) {
+  .contacts-list {
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .contact-item:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .contact-container {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+
+  /* info@devstudio.com */
+  .mail-icon {
+    width: 16px;
+    height: 12px;
+    margin-right: 10px;
+  }
+
+  /* +38 096 111 11 11 */
+
+  .tel-icon {
+    width: 10px;
+    height: 16px;
+    margin-right: 10px;
+  }
+}
+
+//.contact-container:hover,
+//.contact-container:focus {
+//  color: var(--accent-text-color);
+//}
+//
+//.contact-container:hover .mail-icon,
+//.contact-container:focus .mail-icon,
+//.contact-container:hover .tel-icon,
+//.contact-container:focus .tel-icon {
+//  fill: var(--accent-text-color);
+//}

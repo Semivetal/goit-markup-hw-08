@@ -1,0 +1,128 @@
+// Mobile styles //
+
+/* top line bg */
+.header-style {
+  width: 100%;
+  margin: 0 auto;
+  background: var(--header-background-color);
+  border-bottom: 1px solid #ececec;
+
+  & .container {
+    width: 100%;
+  }
+}
+
+// Header title //
+.logo-general {
+  text-decoration: none;
+  font-family: Raleway;
+  font-weight: 700;
+  color: var(--accent-text-color);
+}
+
+.logo-black {
+  color: var(--title-text-color);
+}
+
+.logo-white {
+  color: var(--header-background-color);
+}
+
+.logo-general {
+  width: 134px;
+  height: 28px;
+  font-size: 24px;
+  line-height: 1.17;
+}
+
+.logo-header-position {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.contacts-list {
+  display: none;
+}
+
+// Tablet styles //
+@media screen and (min-width: 768px) {
+  .burger-btn {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .logo-general {
+    margin-right: 88px;
+  }
+
+  .logo-header-position {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+
+// Desktop styles //
+@media screen and (min-width: 1200px) {
+  .header-style {
+    & .container {
+      width: 1200px;
+    }
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  .logo-general {
+    width: 145px;
+    height: 31px;
+    font-size: 26px;
+    line-height: 1.2;
+    margin-right: 94px;
+  }
+
+  .logo-header-position {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+// /* top line bg */
+// .header-style {
+//   background: var(--header-background-color);
+//   border-bottom: 1px solid #ececec;
+// }
+
+/* WebStudio-header */
+
+// .logo-general {
+//   text-decoration: none;
+//   width: 145px;
+//   height: 31px;
+//
+//   font-family: Raleway;
+//   font-weight: 700;
+//   font-size: 26px;
+//   line-height: 1.2;
+//   color: var(--accent-text-color);
+// }
+
+// .logo-header-position {
+//   padding-top: 24px;
+//   padding-bottom: 25px;
+//   margin-right: 93px;
+// }
+
+// .logo-black {
+//   color: var(--title-text-color);
+// }
+
+// .logo-white {
+//   color: var(--header-background-color);
+// }

@@ -1,0 +1,117 @@
+/* Section 4 */
+
+// Mobile styles //
+
+.fourth-section {
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--team-background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.team-title {
+  width: 205px;
+  height: 33px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  color: var(--title-text-color);
+}
+
+.team-position {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.team-item {
+  width: 450px;
+  height: 622px;
+  padding-bottom: 30px;
+  background: var(--header-background-color);
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .team-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.team-link {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.18;
+  color: var(--title-text-color);
+}
+
+.team-text {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.18;
+  color: var(--primary-text-color);
+}
+
+// Tablet styles //
+
+@media screen and (min-width: 768px) {
+  .team-item {
+    width: 354px;
+    height: 536px;
+    padding-bottom: 0;
+    margin: 15px;
+  }
+
+  .team-position {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+// Desktop styles //
+
+@media screen and (min-width: 1200px) {
+  .fourth-section {
+    padding-top: 94px;
+    padding-bottom: 79px;
+  }
+
+  .team-title {
+    width: 264px;
+    height: 42px;
+
+    font-size: 36px;
+    line-height: 1.17;
+  }
+
+  .team-position {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .team-item {
+    width: 270px;
+    height: 428px;
+    margin: 15px;
+    padding-bottom: 30px;
+  }
+}

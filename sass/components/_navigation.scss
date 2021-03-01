@@ -1,0 +1,102 @@
+/* Navigation */
+
+// Mobile styles //
+.nav-position {
+  display: none;
+}
+
+// Tablet styles //
+@media screen and (min-width: 768px) {
+  .nav-position {
+    display: block;
+  }
+
+  .nav-list {
+    display: flex;
+  }
+
+  .nav-position {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .nav-position:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  .accent-line {
+    position: relative;
+  }
+
+  .navigate {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--title-text-color);
+
+    transition: color var(--animation);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-text-color);
+    }
+  }
+
+  /* Студия */
+  .studio {
+    width: 49px;
+  }
+
+  /* Портфолио */
+  .portfolio {
+    width: 77px;
+  }
+}
+
+// // Desktop styles // //
+@media screen and (min-width: 1200px) {
+  .nav-list {
+    display: flex;
+  }
+
+  .nav-position {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .nav-position:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  .accent-line {
+    position: relative;
+  }
+
+  .navigate {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--title-text-color);
+
+    transition: color var(--animation);
+
+    &:hover,
+    &:focus {
+      color: var(--accent-text-color);
+    }
+  }
+
+  /* Студия */
+  .studio {
+    width: 49px;
+  }
+
+  /* Портфолио */
+  .portfolio {
+    width: 77px;
+  }
+}

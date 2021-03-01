@@ -1,0 +1,154 @@
+/* Section 5 */
+
+.fifth-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  & .container {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: -15px;
+  }
+}
+
+.clients-title {
+  margin: 0 auto;
+  width: 314px;
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+  text-align: center;
+}
+
+.clients-position {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 90px;
+  margin: 15px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  transition: border-color var(--animation);
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent-text-color);
+  }
+}
+
+.clients-icon {
+  width: 89px;
+  height: 50px;
+  fill: var(--links-background-color);
+
+  transition: fill var(--animation);
+
+  .clients-link:hover &,
+  .clients-link:focus & {
+    fill: var(--accent-text-color);
+  }
+}
+
+// Tablet styles //
+
+@media screen and (min-width: 768px) {
+  .clients-link {
+    width: 226px;
+  }
+}
+
+// Desktop styles //
+
+@media screen and (min-width: 1200px) {
+  .fifth-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .clients-title {
+    width: 390px;
+    height: 42px;
+
+    font-size: 36px;
+    line-height: 1.17;
+  }
+
+  .clients-position {
+    display: flex;
+    margin-top: 35px;
+  }
+
+  .clients-link {
+    width: 170px;
+  }
+}
+
+/*
+.fifth-section {
+  padding-top: 94px;
+  padding-bottom: 79px;
+
+  & .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.clients-title {
+  margin: 0 auto;
+  width: 390px;
+  height: 42px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.clients-position {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+
+.clients-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  margin: 15px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+
+  transition: border-color var(--animation);
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent-text-color);
+  }
+}
+
+.clients-icon {
+  width: 89px;
+  height: 50px;
+  fill: var(--links-background-color);
+
+  transition: fill var(--animation);
+
+  .clients-link:hover &,
+  .clients-link:focus & {
+    fill: var(--accent-text-color);
+  }
+}
+*/
