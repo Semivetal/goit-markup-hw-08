@@ -47,6 +47,8 @@ ol {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 button :hover {
@@ -66,7 +68,7 @@ button :hover {
   font-style: normal;
   letter-spacing: 0.03em;
   width: 100%;
-  min-width: 320px;
+  min-width: 480px;
 }
 
 .section-padding {
@@ -227,11 +229,12 @@ button :hover {
   max-height: 796px;
   left: 50%;
   padding: 48px 40px;
+  z-index: 10;
   transform: translateX(-50%) translateY(-101%);
   background-color: var(--header-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  transition: var --animation;
+  transition: transform var(--animation);
 }
 
 .mobile-menu.is-open {
@@ -419,6 +422,23 @@ button :hover {
 
 .current {
   color: var(--accent-text-color);
+}
+
+@media screen and (min-width: 768px) {
+  .current {
+    color: var(--accent-text-color);
+  }
+  .current::after {
+    position: absolute;
+    content: "";
+    display: block;
+    left: 0;
+    margin-top: 29px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-text-color);
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -1203,6 +1223,7 @@ button :hover {
 /* Portfolio cards */
 .card-set {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   align-content: stretch;
   margin: -15px;
@@ -1210,8 +1231,9 @@ button :hover {
 
 .card {
   margin: 15px;
-  width: 370px;
+  width: 450px;
   list-style: none;
+  list-style-position: inside;
   text-decoration: none;
   background: var(--header-background-color);
   border: 1px solid var(--portfolio-border-color);
@@ -1280,6 +1302,108 @@ button :hover {
   color: var(--primary-text-color);
 }
 
+@media screen and (min-width: 768px) {
+  .card-set {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+  .card {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card {
+    width: 370px;
+  }
+}
+
+/*
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  margin: -15px;
+}
+
+.card {
+  margin: 15px;
+  width: 370px;
+  list-style: none;
+  text-decoration: none;
+  background: var(--header-background-color);
+  border: 1px solid var(--portfolio-border-color);
+
+  transition: box-shadow var(--animation);
+
+  &:hover,
+  &:focus-within {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.card-box {
+  position: relative;
+  width: 100%;
+  height: 294px;
+  margin-left: auto;
+  margin-right: auto;
+
+  overflow: hidden;
+}
+
+.overlay-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translatey(100%);
+  transition: transform var(--animation);
+
+  .card:hover &,
+  .card:focus-within & {
+    transform: translatey(0);
+  }
+
+  & > .overlay-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+    text-align: left;
+    color: var(--header-background-color);
+  }
+}
+
+.card-text {
+  padding: 20px 24px;
+}
+
+.work-text {
+  display: inline-block;
+  margin: 0 auto;
+  min-width: 322px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--title-text-color);
+}
+
+.work-type {
+  display: inline-block;
+  margin: 0 auto;
+  min-width: 322px;
+  font-size: 16px;
+  line-height: 1.87;
+  color: var(--primary-text-color);
+}
+*/
 .first-section {
   width: 100%;
   margin: 0 auto;
@@ -1779,12 +1903,121 @@ button :hover {
 */
 /* Portfolio */
 .portfolio-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--header-background-color);
+}
+
+.portfolio-section .mobile-menu {
+  position: absolute;
+}
+
+/* Portfolio navigation buttons */
+.btn-position {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: stretch;
+  width: 362px;
+  max-height: 91px;
+  margin-bottom: 40px;
+  /*margin-bottom: 40px;*/
+}
+
+.btn {
+  font-family: inherit;
+  padding: 6px 20px;
+  height: 38px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  background-color: var(--team-background-color);
+  color: var(--title-text-color);
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: background-color var(--animation), color var(--animation), box-shadow var(--animation);
+}
+
+.btn:hover, .btn:focus {
+  cursor: pointer;
+  background-color: var(--accent-text-color);
+  color: var(--header-background-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+}
+
+.btn-item:first-child {
+  margin-bottom: 15px;
+}
+
+.btn-item:last-child {
+  padding-right: 121px;
+}
+
+.all {
+  min-width: 73px;
+}
+
+.sites {
+  min-width: 128px;
+}
+
+.apps {
+  min-width: 145px;
+}
+
+.design {
+  min-width: 103px;
+}
+
+.marketing {
+  min-width: 130px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-section .container {
+    width: 100%;
+    max-width: 768px;
+  }
+  .btn-position {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 611px;
+    margin-bottom: 30px;
+  }
+  .btn-item:first-child {
+    margin-bottom: 0;
+  }
+  .btn-item:last-child {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .portfolio-section .container {
+    width: 100%;
+    max-width: 1200px;
+  }
+  .btn-position {
+    margin-bottom: 50px;
+  }
+}
+
+/*
+.portfolio-section {
   padding-top: 94px;
   padding-bottom: 94px;
   background-color: var(--header-background-color);
 }
 
-/* Portfolio navigation buttons */
 .btn-position {
   display: flex;
   justify-content: center;
@@ -1803,15 +2036,18 @@ button :hover {
   color: var(--title-text-color);
   border-radius: 4px;
   border: 1px solid transparent;
-  transition: background-color, color, box-shadow var(--animation);
-}
 
-.btn:hover, .btn:focus {
-  cursor: pointer;
-  background-color: var(--accent-text-color);
-  color: var(--header-background-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
+  transition: background-color, color, box-shadow var(--animation);
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background-color: var(--accent-text-color);
+    color: var(--header-background-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+  }
 }
 
 .btn-item:not(:first-child) {
@@ -1837,4 +2073,5 @@ button :hover {
 .marketing {
   min-width: 130px;
 }
+*/
 /*# sourceMappingURL=main.css.map */

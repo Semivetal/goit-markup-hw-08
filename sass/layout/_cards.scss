@@ -2,6 +2,115 @@
 
 .card-set {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: stretch;
+  margin: -15px;
+}
+
+.card {
+  margin: 15px;
+  width: 450px;
+  list-style: none;
+  list-style-position: inside;
+  text-decoration: none;
+  background: var(--header-background-color);
+  border: 1px solid var(--portfolio-border-color);
+
+  transition: box-shadow var(--animation);
+
+  &:hover,
+  &:focus-within {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.card-box {
+  position: relative;
+  width: 100%;
+  height: 294px;
+  margin-left: auto;
+  margin-right: auto;
+
+  overflow: hidden;
+}
+
+.overlay-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translatey(100%);
+  transition: transform var(--animation);
+
+  .card:hover &,
+  .card:focus-within & {
+    transform: translatey(0);
+  }
+
+  & > .overlay-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+    text-align: left;
+    color: var(--header-background-color);
+  }
+}
+
+.card-text {
+  padding: 20px 24px;
+}
+
+.work-text {
+  display: inline-block;
+  margin: 0 auto;
+  min-width: 322px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--title-text-color);
+}
+
+.work-type {
+  display: inline-block;
+  margin: 0 auto;
+  min-width: 322px;
+  font-size: 16px;
+  line-height: 1.87;
+  color: var(--primary-text-color);
+}
+
+// Tablet styles //
+
+@media screen and (min-width: 768px) {
+  .card-set {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+
+  .card {
+    width: 354px;
+  }
+}
+
+// Desktop styles //
+
+@media screen and (min-width: 1200px) {
+  .card {
+    width: 370px;
+  }
+}
+
+/*
+.card-set {
+  display: flex;
   flex-wrap: wrap;
   align-content: stretch;
   margin: -15px;
@@ -83,3 +192,4 @@
   line-height: 1.87;
   color: var(--primary-text-color);
 }
+*/
