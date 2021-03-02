@@ -224,8 +224,7 @@ button :hover {
   top: 0;
   width: 100%;
   max-width: 480px;
-  height: 100vh;
-  height: 796px;
+  max-height: 796px;
   left: 50%;
   padding: 48px 40px;
   transform: translateX(-50%) translateY(-101%);
@@ -784,10 +783,11 @@ button :hover {
   .footer-right {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     margin-left: auto;
     margin: 0;
     max-width: 570px;
-    max-height: 86px;
+    /*max-height: 86px;*/
     margin-left: 93px;
   }
   .footer-subscribe-title {

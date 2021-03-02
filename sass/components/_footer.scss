@@ -241,10 +241,11 @@
   .footer-right {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     margin-left: auto;
     margin: 0;
     max-width: 570px;
-    max-height: 86px;
+    /*max-height: 86px;*/
     margin-left: 93px;
   }
 
