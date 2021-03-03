@@ -225,8 +225,6 @@ button :hover {
   position: absolute;
   top: 0;
   width: 100%;
-  max-width: 480px;
-  max-height: 796px;
   left: 50%;
   padding: 48px 40px;
   z-index: 10;
@@ -327,7 +325,7 @@ button :hover {
   background-color: var(--team-background-color);
   border: 1px solid rgba(33, 33, 33, 0.2);
   transform: rotate(90deg);
-  margin-left: 10px;
+  margin-left: 14px;
 }
 
 .mobile-menu-social-link.linked-after:after {
@@ -749,6 +747,10 @@ button :hover {
 }
 
 @media screen and (min-width: 1200px) {
+  .section-padding {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
   .footer-section .container {
     width: 1200px;
   }
@@ -985,7 +987,8 @@ button :hover {
   transform: translate(-50%, -50%);
   width: 528px;
   height: 581px;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: hidden;
   background-color: var(--header-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -1188,6 +1191,7 @@ button :hover {
     height: 95%;
     max-width: 450px;
     max-height: 609px;
+    overflow: scroll;
   }
   .form {
     width: 450px;
@@ -1401,15 +1405,12 @@ button :hover {
 .first-section {
   width: 100%;
   margin: 0 auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
   background-color: var(--order-background-color);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../css/studio_images/mobile/header-mobile/m-header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.first-section .section-padding {
-  padding-top: 118px;
-  padding-bottom: 118px;
 }
 
 .first-section .container {
@@ -1441,6 +1442,10 @@ button :hover {
 }
 
 @media screen and (min-width: 1200px) {
+  .first-section {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
   .first-section {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../css/studio_images/desktop/header-desktop/d-header.jpg");
   }
@@ -1475,10 +1480,6 @@ button :hover {
   .first-section {
     min-width: 1200px;
     width: 100%;
-  }
-  .section-padding {
-    padding-top: 200px;
-    padding-bottom: 200px;
   }
   .h1-style {
     max-width: 696px;
@@ -1567,8 +1568,8 @@ button :hover {
 
 @media screen and (min-width: 1200px) {
   .second-section {
-    padding-top: 79px;
-    padding-bottom: 79px;
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
   .strengths-position {
     display: flex;
@@ -1604,14 +1605,13 @@ button :hover {
 @media screen and (min-width: 1200px) {
   .third-section {
     padding-top: 0px;
-    padding-bottom: 79px;
+    padding-bottom: 94px;
   }
   /* Чем мы занимаемся */
   .activity-title {
     margin: 0 auto;
-    width: 376px;
-    height: 42px;
     white-space: nowrap;
+    margin-bottom: 50px;
     font-weight: 700;
     font-size: 36px;
     line-height: 42px;
@@ -1627,7 +1627,8 @@ button :hover {
   .activity-list {
     display: flex;
     justify-content: center;
-    margin-top: 35px;
+    margin-top: -15px;
+    margin-bottom: -15px;
   }
   .thumb {
     position: relative;
@@ -1732,7 +1733,7 @@ button :hover {
 @media screen and (min-width: 1200px) {
   .fourth-section {
     padding-top: 94px;
-    padding-bottom: 79px;
+    padding-bottom: 94px;
   }
   .team-title {
     width: 264px;
@@ -1914,9 +1915,7 @@ button :hover {
   flex-wrap: wrap;
   align-content: stretch;
   width: 362px;
-  max-height: 91px;
   margin-bottom: 40px;
-  /*margin-bottom: 40px;*/
 }
 
 .btn {

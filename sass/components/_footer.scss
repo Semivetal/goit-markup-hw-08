@@ -179,6 +179,11 @@
 
 // Desktop styles //
 @media screen and (min-width: 1200px) {
+  .section-padding {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
   .footer-section {
     .container {
       width: 1200px;

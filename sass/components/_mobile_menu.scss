@@ -31,8 +31,6 @@
   position: absolute;
   top: 0;
   width: 100%;
-  max-width: 480px;
-  max-height: 796px;
   left: 50%;
   padding: 48px 40px;
   z-index: 10;
@@ -135,7 +133,7 @@
     background-color: var(--team-background-color);
     border: 1px solid rgba(33, 33, 33, 0.2);
     transform: rotate(90deg);
-    margin-left: 10px;
+    margin-left: 14px;
   }
 
   &.linked-after:after {

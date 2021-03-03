@@ -8,16 +8,16 @@
 @media screen and (min-width: 1200px) {
   .third-section {
     padding-top: 0px;
-    padding-bottom: 79px;
+    padding-bottom: 94px;
   }
 
   /* Чем мы занимаемся */
 
   .activity-title {
     margin: 0 auto;
-    width: 376px;
-    height: 42px;
+
     white-space: nowrap;
+    margin-bottom: 50px;
 
     font-weight: 700;
     font-size: 36px;
@@ -37,7 +37,8 @@
   .activity-list {
     display: flex;
     justify-content: center;
-    margin-top: 35px;
+    margin-top: -15px;
+    margin-bottom: -15px;
   }
 
   .thumb {
